@@ -20,7 +20,7 @@
     "analyze": "size-limit --why",
     "storybook": "start-storybook -p 6006",
     "build-storybook": "build-storybook",
-    "release": "np"
+    "release": "np --no-2fa"
   },
   "dependencies": {
     "@joshdcuneo/tsm": "^0.1.4"
