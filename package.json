@@ -1,0 +1,86 @@
+{
+  "version": "0.0.0",
+  "license": "MIT",
+  "main": "dist/index.js",
+  "typings": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "src"
+  ],
+  "engines": {
+    "node": ">=10"
+  },
+  "scripts": {
+    "start": "tsdx watch",
+    "build": "tsdx build",
+    "test": "tsdx test --passWithNoTests",
+    "lint": "tsdx lint",
+    "prepare": "tsdx build",
+    "size": "size-limit",
+    "analyze": "size-limit --why",
+    "storybook": "start-storybook -p 6006",
+    "build-storybook": "build-storybook",
+    "release": "np"
+  },
+  "dependencies": {
+    "@joshdcuneo/tsm": "^0.1.4"
+  },
+  "peerDependencies": {
+    "react": ">=16.8"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "tsdx lint"
+    }
+  },
+  "prettier": {
+    "printWidth": 80,
+    "semi": true,
+    "singleQuote": true,
+    "trailingComma": "es5"
+  },
+  "name": "@joshdcuneo/tsm-react",
+  "author": "Josh",
+  "module": "dist/tsm-react.esm.js",
+  "size-limit": [
+    {
+      "path": "dist/tsm-react.cjs.production.min.js",
+      "limit": "10 KB"
+    },
+    {
+      "path": "dist/tsm-react.esm.js",
+      "limit": "10 KB"
+    }
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/joshdcuneo/tsm-react.git"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.12.9",
+    "@size-limit/preset-small-lib": "^4.9.1",
+    "@storybook/addon-essentials": "^6.1.10",
+    "@storybook/addon-info": "^5.3.21",
+    "@storybook/addon-links": "^6.1.10",
+    "@storybook/addons": "^6.1.10",
+    "@storybook/react": "^6.1.10",
+    "@testing-library/jest-dom": "^5.11.6",
+    "@testing-library/react": "^11.2.2",
+    "@testing-library/user-event": "^12.5.0",
+    "@types/react": "^17.0.0",
+    "@types/react-dom": "^17.0.0",
+    "babel-loader": "^8.2.2",
+    "husky": "^4.3.4",
+    "np": "^7.0.0",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-is": "^17.0.1",
+    "size-limit": "^4.9.1",
+    "tsdx": "^0.14.1",
+    "tslib": "^2.0.3",
+    "typescript": "^4.1.2"
+  }
+}
